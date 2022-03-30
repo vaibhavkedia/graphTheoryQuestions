@@ -26,7 +26,7 @@ public:
         for(int i = 0;i<4;++i){
           int x = f + dx[i];
           int y = s + dy[i];
-          if(x>=0 && y>=0 && x<m && y<n && state[x][y] != state[f][s] && state[x][y] != 3  ){
+          if(x>=0 && y>=0 && x<m && y<n && state[x][y] != state[f][s] && state[x][y] != 3 && heights[x][y] >= heights[f][s] ){
             state[x][y] = min(3,state[x][y]+state[f][s]);
             q.push({x,y});
           } 
