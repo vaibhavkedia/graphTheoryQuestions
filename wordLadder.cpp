@@ -18,11 +18,11 @@ public:
       while(!q.empty()){
         int size = q.size();
         for(int j=0;j<size;++j){
-          int s = q.front();
+          string s = q.front();
           q.pop();
           if(s.compare(endWord)==0) return count;
           for(int i=0;i<s.size();++i){
-            int temp = s[i];
+            char temp = s[i];
             for(char k = 'a';k<='z';++k){
               s[i] = k;
               if(str.find(s) != str.end() && isVisited.find(s) == isVisited.end()){
